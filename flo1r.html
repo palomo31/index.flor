@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Flores Amarillas para Ti 💛</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(to bottom, #fff8e7, #ffd54f);
+      font-family: "Segoe UI", sans-serif;
+      overflow: hidden;
+    }
+
+    h1 {
+      color: #d17f00;
+      font-size: 2.3rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 6px #fff;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .flower {
+      position: relative;
+      width: 200px;
+      height: 200px;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    .petal {
+      width: 100px;
+      height: 140px;
+      background: radial-gradient(circle at 30% 30%, #fff9c4, #fbc02d);
+      border-radius: 60% 60% 50% 50%;
+      position: absolute;
+      top: 30px;
+      left: 50px;
+      transform-origin: bottom center;
+      box-shadow: inset -5px -5px 12px rgba(0,0,0,0.25);
+    }
+
+    .petal:nth-child(1) { transform: rotate(0deg) translateY(-60px); }
+    .petal:nth-child(2) { transform: rotate(60deg) translateY(-60px); }
+    .petal:nth-child(3) { transform: rotate(120deg) translateY(-60px); }
+    .petal:nth-child(4) { transform: rotate(180deg) translateY(-60px); }
+    .petal:nth-child(5) { transform: rotate(240deg) translateY(-60px); }
+    .petal:nth-child(6) { transform: rotate(300deg) translateY(-60px); }
+
+    .center {
+      width: 90px;
+      height: 90px;
+      background: radial-gradient(circle, #6d4c41, #3e2723);
+      border-radius: 50%;
+      position: absolute;
+      top: 55px;
+      left: 55px;
+      box-shadow: inset -6px -6px 14px rgba(0,0,0,0.4);
+      animation: shine 3s infinite alternate;
+    }
+
+    .stem {
+      width: 18px;
+      height: 220px;
+      background: #388e3c;
+      margin-top: -40px;
+      border-radius: 10px;
+      position: relative;
+    }
+
+    .leaf {
+      width: 100px;
+      height: 50px;
+      background: linear-gradient(to right, #66bb6a, #2e7d32);
+      border-radius: 50%;
+      position: absolute;
+      top: 80px;
+      left: -90px;
+      transform: rotate(-30deg);
+      box-shadow: inset -3px -3px 8px rgba(0,0,0,0.2);
+    }
+
+    .leaf.right {
+      left: auto;
+      right: -90px;
+      transform: rotate(30deg);
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-20px); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes shine {
+      from { box-shadow: inset -6px -6px 14px rgba(0,0,0,0.4), 0 0 10px #ffeb3b; }
+      to { box-shadow: inset -6px -6px 14px rgba(0,0,0,0.4), 0 0 25px #fff176; }
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #ffb300;
+      border: none;
+      border-radius: 25px;
+      font-size: 1.1rem;
+      cursor: pointer;
+      color: white;
+      font-weight: bold;
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+      transition: transform 0.2s;
+    }
+
+    button:hover {
+      transform: scale(1.1);
+      background: #ffa000;
+    }
+  </style>
+</head>
+<body>
+  <h1>💛 mi negra mi amor</h1>
+  <div class="flower">
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="petal"></div>
+    <div class="center"></div>
+  </div>
+  <div class="stem">
+    <div class="leaf"></div>
+    <div class="leaf right"></div>
+  </div>
+  <button onclick="mensaje()">🌼 Presiona aquí 🌼</button>
+
+  <script>
+    function mensaje() {
+      alert("Eres mi flor amarilla, la más linda y especial en mi vida 💛🌼✨");
+    }
+  </script>
+</body>
+</html>
